@@ -16,7 +16,8 @@ export default defineConfig({
         text: '소개',
         items: [
           { text: '시작하기', link: '/getting-started' },
-          { text: '기본 사용법', link: '/basic-usage' }
+          { text: '기본 사용법', link: '/basic-usage' },
+          { text: 'SvelteKit', link: '/svelte-kit' },
         ]
       },
       {

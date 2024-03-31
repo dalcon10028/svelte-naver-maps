@@ -10,4 +10,6 @@ export interface MapOptions extends naver.maps.MapOptions, ScriptOptions {
   height?: string | number;
 }
 
+export interface MarkerOptions extends Omit<naver.maps.MarkerOptions, "position"> {};
+
 export type MapInitCallback = (map: naver.maps.Map) => void;
