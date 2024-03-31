@@ -1,6 +1,6 @@
 {
   "name": "svelte-naver-maps",
-  "version": "0.0.1",
+  "version": "0.0.2d",
   "description": "Svelte component for Naver Maps",
   "license": "MIT",
   "scripts": {
@@ -59,6 +59,21 @@
     "vitest": "^1.2.0"
   },
   "svelte": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "type": "module"
+  "types": ["./dist/index.d.ts", "./dist/types/index.d.ts"],
+  "type": "module",
+  "module": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dalcon10028/svelte-naver-maps.git"
+  },
+  "keywords": [
+    "svelte",
+    "naver",
+    "navermaps",
+    "maps",
+    "map",
+    "component"
+  ],
+  "author": "dalcon10028",
+  "moduleResolution": "NodeNext"
 }

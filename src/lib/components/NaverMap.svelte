@@ -1,8 +1,8 @@
 <script lang="ts">
 import { onMount } from "svelte";
-import { mapInstance } from "$lib/stores/index.js";
-import type { MapOptions } from "$lib/types/index.js";
-import { createMapScript } from "$lib/utils/create-map-script.js";
+import { mapInstance } from "../stores/index.js";
+import type { MapOptions } from "../types/index.js";
+import { createMapScript } from "../utils/index.js"
 
 export let mapOptions: MapOptions;
 
