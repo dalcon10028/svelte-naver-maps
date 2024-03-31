@@ -1,58 +1,59 @@
-# create-svelte
+# svelte-naver-maps
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+## Svelte Naver Maps이 무엇인가요?
 
-## Creating a project
+Svelte Naver Maps은 네이버에서 제공하는 [Naver Map API](https://navermaps.github.io/maps.js.ncp/)를 Svelte 컴포넌트로 제공하는 비공식 라이브러리 입니다.
 
-If you're seeing this, you've probably already done this step. Congrats!
+`NaverMaps API`의 직접적인 사용이 필요한 경우 [NaverMaps API 공식문서](https://navermaps.github.io/maps.js.ncp/docs/)를 참고해 주세요.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## 지원 컴포넌트
+
+| 컴포넌트        | 설명 |
+| :-----------: | :----:|
+| `NaverMap`    | 네이버 지도 컴포넌트 |
+| `NaverMarker` | 마커 컴포넌트 |
+
+## 설치
+
+::: code-group
+
+```sh [npm]
+$ npm i svelte-naver-maps
+$ npm i -D @types/navermaps # for typescript
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```sh [pnpm]
+$ pnpm add svelte-naver-maps
+$ pnpm add -D @types/navermaps # for typescript
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
+```sh [yarn]
+$ yarn add svelte-naver-maps
+$ yarn add -D @types/navermaps # for typescript
 ```
+:::
 
-To create a production version of your showcase app:
+::: tip NOTE
 
-```bash
-npm run build
-```
+타입스크립트를 사용할 경우 네이버에서 제공해주는 타입 정의([@types/navermaps](https://navermaps.github.io/maps.js.ncp/docs/tutorial-3-Using-TypeScript.html))를 추가적으로 설치해주세요.
 
-You can preview the production build with `npm run preview`.
+:::
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## 기본 사용법
 
-## Publishing
+```svelte
+<script>
+import { NaverMap } from "svelte-naver-maps";
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+</script>
 
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+<NaverMap
+  mapOptions={{
+    clientId: "YOUR_NAVER_MAP_CLIENT_ID",
+    width: "100%",
+    height: "400px",
+  }}
+/>
 ```
