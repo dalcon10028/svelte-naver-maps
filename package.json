@@ -4,6 +4,7 @@
 	"description": "Svelte component for Naver Maps",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
+	"svelte": "index.js",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
