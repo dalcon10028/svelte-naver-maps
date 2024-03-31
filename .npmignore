@@ -1,0 +1,15 @@
+.github
+.svelte-kit
+.vscode
+node_modules
+src
+static
+tests
+.gitignore
+.prettierrc
+.prettierignore
+playwright.config.js
+pnpm-lock.yaml
+svelte.config.js
+tsconfig.json
+vite.config.js
