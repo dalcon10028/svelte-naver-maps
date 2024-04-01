@@ -12,6 +12,7 @@ Svelte Naver Maps은 네이버에서 제공하는 [Naver Map API](https://naverm
 | 컴포넌트        | 설명 |
 | :-----------: | :----:|
 | `NaverMap`    | 네이버 지도 컴포넌트 |
+| `NaverMarker` | 마커 컴포넌트 |
 
 ## 설치
 
