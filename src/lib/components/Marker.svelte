@@ -6,7 +6,7 @@ import { get, writable } from "svelte/store";
 
 export let latitude: number;
 export let longitude: number;
-export let markerOptions: MarkerOptions | undefined;
+export let markerOptions: MarkerOptions | undefined = {};
 
 const { mapInstance } = getContext<MapContext>("map");
 
