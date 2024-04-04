@@ -1,5 +1,12 @@
-<script lang="ts">
-import { NaverMap, NaverMarker, NaverInfoWindow } from "$lib";
+# 정보 창 표시하기
+
+마커에 정보 창을 표시하는 예제입니다.
+
+![tutorial-1-infowindow-simple](tutorial-1-infowindow-simple.png)
+
+```svelte
+<script>
+import { NaverMap, NaverMarker, NaverInfoWindow } from "svelte-naver-maps";
 
 let open: boolean = true;
 
@@ -8,7 +15,7 @@ const onMarkerClick = () => {
 };
 
 const mapOptions = {
-	clientId: "tew0f0bytg",
+	clientId: "YOUR_NAVER_MAP_CLIENT_ID",
 	width: "100%",
 	height: "400px",
 	latitude: 37.3849483,
@@ -39,3 +46,4 @@ const mapOptions = {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 </style>
+```

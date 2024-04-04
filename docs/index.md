@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Svelte Naver maps"
   # text: "Svelte Components for Naver maps"
-  tagline: Svelte Components for Naver maps
+  tagline: 스벨트를 위한 네이버 지도 컴포넌트
   actions:
     - theme: brand
       text: Read docs

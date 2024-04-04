@@ -38,6 +38,12 @@ export default defineConfig({
                 { text: '이미지 아이콘 사용하기', link: '/guide/tutorial-3-marker-image-icon' },
               ]
             },
+            { 
+              text: '정보 창', 
+              items: [
+                { text: '정보 창 표시하기', link: '/guide/tutorial-1-infowindow-simple' },
+              ]
+            },
           ]
         }
       ],

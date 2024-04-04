@@ -14,11 +14,13 @@ export interface MapOptions extends naver.maps.MapOptions, ScriptOptions {
 
 export interface MarkerOptions extends Omit<naver.maps.MarkerOptions, "position"> {};
 
-export type MapContext = {
+export interface InfoWindowOptions extends Omit<naver.maps.InfoWindowOptions, "content" | "position"> {};
+
+export interface MapContext {
   mapInstance: Writable<naver.maps.Map>;
 }
 
-export type MarkerContext = {
+export interface MarkerContext {
   markerInstance: Writable<naver.maps.Marker>;
   position: { 
     latitude: number;
