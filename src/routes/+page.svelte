@@ -1,5 +1,5 @@
 <script lang="ts">
-import { NaverMap, NaverMarker, NaverInfoWindow } from "$lib";
+import { NaverMap, NaverCircle } from "$lib";
 
 let open: boolean = true;
 
@@ -13,22 +13,19 @@ const mapOptions = {
 	height: "400px",
 	latitude: 37.3849483,
 	longitude: 127.1229117,
+  zoom: 8,
+};
+
+const circleOptions = {
+  radius: 20000,
+  fillColor: 'crimson',
+  fillOpacity: 0.8
 };
 
 </script>
 
 <NaverMap mapOptions={mapOptions}>
-  <NaverMarker on:click={onMarkerClick} latitude={37.3595704} longitude={127.105399}>
-      <NaverInfoWindow open={open}>
-        <div class="iw_inner">
-          <h3>서울특별시청</h3>
-          <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br />
-            02-120 | 공공,사회기관 &gt; 특별,광역시청<br />
-            <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>
-          </p>
-        </div>
-      </NaverInfoWindow>
-    </NaverMarker>
+  <NaverCircle latitude={37.3849483} longitude={127.1229117} circleOptions={circleOptions} />
 </NaverMap>
 
 <style>

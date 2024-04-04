@@ -16,6 +16,8 @@ export interface MarkerOptions extends Omit<naver.maps.MarkerOptions, "position"
 
 export interface InfoWindowOptions extends Omit<naver.maps.InfoWindowOptions, "content" | "position"> {};
 
+export interface CircleOptions extends Omit<naver.maps.CircleOptions, "center"> {};
+
 export interface MapContext {
   mapInstance: Writable<naver.maps.Map>;
 }
