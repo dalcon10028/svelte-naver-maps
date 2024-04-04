@@ -1,16 +1,18 @@
 <script lang="ts">
-import { createEventDispatcher, onDestroy, onMount } from "svelte";
-import { mapCallbacks, mapInstance, mapIsLoaded } from "../stores/index.js";
+import { createEventDispatcher, onDestroy, onMount, setContext } from "svelte";
 import { createMapScript } from "../utils/index.js"
 import { UI_MAP_EVENT } from "$lib/constants/event.js";
-import { get } from "svelte/store";
-import type { MapOptions } from "../types/index.js";
+import { get, writable } from "svelte/store";
+import type { MapContext, MapOptions } from "../types/index.js";
 
 export let mapOptions: MapOptions;
 
+let mapElement: HTMLDivElement;
+const mapInstance = writable<naver.maps.Map>();
+
 const dispatcher = createEventDispatcher();
 
-let mapElement: HTMLDivElement;
+setContext<MapContext>("map", { mapInstance });
 
 const initMap = () => {
   mapInstance.set(new window.naver.maps.Map(mapElement, {
@@ -25,9 +27,6 @@ const initMap = () => {
       dispatcher(eventName, e);
     });
   });
-  mapIsLoaded.set(true);
-  get(mapCallbacks).forEach((callback) => callback(get(mapInstance)));
-  mapCallbacks.set([]);
 
   dispatcher("load", get(mapInstance));
 }
@@ -41,7 +40,6 @@ onMount(() => {
 
 onDestroy(() => {
   get(mapInstance).destroy();
-  mapIsLoaded.set(false);
 })
 </script>
 

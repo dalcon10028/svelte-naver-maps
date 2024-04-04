@@ -1,6 +1,6 @@
 {
   "name": "svelte-naver-maps",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Svelte component for Naver Maps",
   "license": "MIT",
   "scripts": {

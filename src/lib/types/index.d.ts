@@ -1,3 +1,5 @@
+import type { Writable } from "svelte/store";
+
 export interface ScriptOptions {
   clientId: string;
   category?: "gov" | "ncp" | "fin";
@@ -12,4 +14,14 @@ export interface MapOptions extends naver.maps.MapOptions, ScriptOptions {
 
 export interface MarkerOptions extends Omit<naver.maps.MarkerOptions, "position"> {};
 
-export type MapInitCallback = (map: naver.maps.Map) => void;
+export type MapContext = {
+  mapInstance: Writable<naver.maps.Map>;
+}
+
+export type MarkerContext = {
+  markerInstance: Writable<naver.maps.Marker>;
+  position: { 
+    latitude: number;
+    longitude: number;
+  }
+}
