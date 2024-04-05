@@ -58,6 +58,12 @@ export default defineConfig({
                 { text: '정보 창 표시하기', link: '/guide/tutorial-1-infowindow-simple' },
               ]
             },
+            { 
+              text: '도형', 
+              items: [
+                { text: '사각형, 원, 타원 그리기', link: '/guide/tutorial-1-shape-simple' },
+              ]
+            },
           ]
         }
       ],
@@ -72,6 +78,10 @@ export default defineConfig({
           text: 'Naver Overlays',
           items: [
             { text: 'NaverMarker', link: '/reference/naver-marker' },
+            { text: 'NaverInfoWindow', link: '/reference/naver-info-window' },
+            { text: 'NaverCircle', link: '/reference/naver-circle' },
+            { text: 'NaverEllipse', link: '/reference/naver-ellipse' },
+            { text: 'NaverRectangle', link: '/reference/naver-rectangle' },
           ]
         },
       ],

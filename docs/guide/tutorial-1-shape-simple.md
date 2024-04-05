@@ -1,8 +1,15 @@
-<script lang="ts">
-import { NaverMap, NaverCircle, NaverEllipse, NaverRectangle } from "$lib";
+# 사각형, 원, 타원 그리기
+
+지도 위에 좌표를 기반으로 사각형, 원, 타원을 생성하는 예제입니다.
+
+![tutorial-1-shape-simple](tutorial-1-shape-simple.png)
+
+```svelte
+<script>
+import { NaverMap, NaverCircle, NaverEllipse, NaverRectangle } from "svelte-naver-maps";
 
 const mapOptions = {
-	clientId: "tew0f0bytg",
+	clientId: "YOUR_NAVER_MAP_CLIENT_ID",
 	width: "100%",
 	height: "400px",
 	latitude: 37.3595953,
@@ -31,3 +38,4 @@ const ellipseOptions = {
   <NaverEllipse minLatitude={37.1793196} minLongitude={127.6795594} maxLatitude={37.5398662} maxLongitude={128.4312422} ellipseOptions={ellipseOptions} />
   <NaverRectangle minLatitude={37.1793196} minLongitude={125.8795594} maxLatitude={37.5398662} maxLongitude={126.3312422} />
 </NaverMap>
+```

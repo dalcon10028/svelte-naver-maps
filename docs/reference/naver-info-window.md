@@ -14,7 +14,7 @@
 ## Type Definitions
 
 ### InfoWindowOptions
-[`naver.maps.InfoWindowOptions`](https://navermaps.github.io/maps.js.ncp/docs/naver.maps.Marker.html#~MarkerOptions)에서
+[`naver.maps.InfoWindowOptions`](https://navermaps.github.io/maps.js.ncp/docs/naver.maps.InfoWindow.html#~InfoWindowOptions)에서
 마커의 위치 정보인 `position`와 정보 창의 내용인 `content`를 제외한 객체입니다.
 위치 정보는 마커를 통해서 얻고, 정보 창의 내용은 `slot`을 통해서 채워넣습니다.
 
