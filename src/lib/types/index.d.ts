@@ -20,6 +20,8 @@ export interface CircleOptions extends Omit<naver.maps.CircleOptions, "center"> 
 
 export interface EllipseOptions extends Omit<naver.maps.EllipseOptions, "bounds"> {};
 
+export interface RectangleOptions extends Omit<naver.maps.RectangleOptions, "bounds"> {};
+
 export interface MapContext {
   mapInstance: Writable<naver.maps.Map>;
 }

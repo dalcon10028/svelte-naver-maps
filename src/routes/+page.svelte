@@ -1,5 +1,5 @@
 <script lang="ts">
-import { NaverMap, NaverCircle, NaverEllipse } from "$lib";
+import { NaverMap, NaverCircle, NaverEllipse, NaverRectangle } from "$lib";
 
 let open: boolean = true;
 
@@ -35,4 +35,5 @@ const ellipseOptions = {
 <NaverMap mapOptions={mapOptions}>
   <NaverCircle latitude={37.3849483} longitude={127.1229117} circleOptions={circleOptions} />
   <NaverEllipse minLatitude={37.1793196} minLongitude={127.6795594} maxLatitude={37.5398662} maxLongitude={128.4312422} ellipseOptions={ellipseOptions} />
+  <NaverRectangle minLatitude={37.1793196} minLongitude={125.8795594} maxLatitude={37.5398662} maxLongitude={126.3312422} />
 </NaverMap>
