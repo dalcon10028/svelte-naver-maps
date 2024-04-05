@@ -18,6 +18,8 @@ export interface InfoWindowOptions extends Omit<naver.maps.InfoWindowOptions, "c
 
 export interface CircleOptions extends Omit<naver.maps.CircleOptions, "center"> {};
 
+export interface EllipseOptions extends Omit<naver.maps.EllipseOptions, "bounds"> {};
+
 export interface MapContext {
   mapInstance: Writable<naver.maps.Map>;
 }
