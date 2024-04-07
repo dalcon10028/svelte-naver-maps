@@ -15,4 +15,4 @@
 
 ### CircleOptions
 [`naver.maps.CircleOptions`](https://navermaps.github.io/maps.js.ncp/docs/naver.maps.Circle.html#~CircleOptions)에서
-원의 중심점 좌표인 `latitude`, `longitude`를 제외한 객체입니다.
+원의 중심점 좌표인 `latitude`, `longitude`와 도형이 그려질 지도 객체인 `map` 필드를 제외한 제외한 객체입니다.

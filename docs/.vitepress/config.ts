@@ -62,6 +62,7 @@ export default defineConfig({
               text: '도형', 
               items: [
                 { text: '사각형, 원, 타원 그리기', link: '/guide/tutorial-1-shape-simple' },
+                { text: '폴리곤, 폴리라인 그리기', link: '/guide/tutorial-3-polygon-simple' },
               ]
             },
           ]
@@ -82,6 +83,8 @@ export default defineConfig({
             { text: 'NaverCircle', link: '/reference/naver-circle' },
             { text: 'NaverEllipse', link: '/reference/naver-ellipse' },
             { text: 'NaverRectangle', link: '/reference/naver-rectangle' },
+            { text: 'NaverPolygon', link: '/reference/naver-polygon' },
+            { text: 'NaverPolyline', link: '/reference/naver-polyline' },
           ]
         },
       ],

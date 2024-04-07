@@ -16,5 +16,5 @@
 ## Type Definitions
 
 ### RectangleOptions
-[`naver.maps.RectangleOptions`](https://navermaps.github.io/maps.js.ncp/docs/naver.maps.Rectangle.html#~RectangleOptions)에서 직사각형의 좌표 경계인 `bounds`를 제외한 객체입니다.
+[`naver.maps.RectangleOptions`](https://navermaps.github.io/maps.js.ncp/docs/naver.maps.Rectangle.html#~RectangleOptions)에서 직사각형의 좌표 경계인 `bounds`와 도형이 그려질 지도 객체인 `map` 필드를 제외한 제외한 객체입니다.
 

@@ -16,5 +16,5 @@
 
 ### MarkerOptions
 [`naver.maps.MarkerOptions`](https://navermaps.github.io/maps.js.ncp/docs/naver.maps.Marker.html#~MarkerOptions)에서
-마커의 위치 정보인 `position`만 제외한 객체입니다.
+마커의 위치 정보인 `position`과 도형이 그려질 지도 객체인 `map` 필드를 제외한 제외한 객체입니다.
 

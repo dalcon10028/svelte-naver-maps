@@ -16,5 +16,5 @@
 ## Type Definitions
 
 ### EllipseOptions
-[`naver.maps.EllipseOptions`](https://navermaps.github.io/maps.js.ncp/docs/naver.maps.Ellipse.html#~EllipseOptions)에서 타원의 좌표 경계인 `bounds`를 제외한 객체입니다.
+[`naver.maps.EllipseOptions`](https://navermaps.github.io/maps.js.ncp/docs/naver.maps.Ellipse.html#~EllipseOptions)에서 타원의 좌표 경계인 `bounds`와 도형이 그려질 지도 객체인 `map` 필드를 제외한 제외한 객체입니다.
 
