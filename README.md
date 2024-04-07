@@ -1,5 +1,6 @@
 # svelte-naver-maps
 
+> [가이드 문서](https://svelte-naver-maps.vercel.app/)
 
 ## Svelte Naver Maps이 무엇인가요?
 
@@ -14,32 +15,22 @@ Svelte Naver Maps은 네이버에서 제공하는 [Naver Map API](https://naverm
 | :-----------: | :----:|
 | `NaverMap`    | 네이버 지도 컴포넌트 |
 | `NaverMarker` | 마커 컴포넌트 |
+| `NaverInfoWindow` | 정보창 컴포넌트 |
+| `NaverCircle` | 원 컴포넌트 |
+| `NaverEllipse` | 타원 컴포넌트 |
+| `NaverRectangle` | 직사각형 컴포넌트 |
+| `NaverPolygon` | 폴리곤 컴포넌트 |
+| `NaverPolyline` | 폴리라인 컴포넌트 |
+
 
 ## 설치
-
-::: code-group
 
 ```sh [npm]
 $ npm i svelte-naver-maps
 $ npm i -D @types/navermaps # for typescript
 ```
 
-```sh [pnpm]
-$ pnpm add svelte-naver-maps
-$ pnpm add -D @types/navermaps # for typescript
-```
-
-```sh [yarn]
-$ yarn add svelte-naver-maps
-$ yarn add -D @types/navermaps # for typescript
-```
-:::
-
-::: tip NOTE
-
 타입스크립트를 사용할 경우 네이버에서 제공해주는 타입 정의([@types/navermaps](https://navermaps.github.io/maps.js.ncp/docs/tutorial-3-Using-TypeScript.html))를 추가적으로 설치해주세요.
-
-:::
 
 ## 기본 사용법
 
