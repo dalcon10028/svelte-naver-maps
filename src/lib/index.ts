@@ -4,3 +4,5 @@ export { default as NaverInfoWindow } from './components/InfoWindow.svelte';
 export { default as NaverCircle } from './components/Circle.svelte';
 export { default as NaverEllipse } from './components/Ellipse.svelte';
 export { default as NaverRectangle } from './components/Rectangle.svelte';
+export { default as NaverPolygon } from './components/Polygon.svelte';
+export { default as NaverPolyline } from './components/Polyline.svelte';
