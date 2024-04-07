@@ -1,11 +1,35 @@
 <script lang="ts">
 import { createEventDispatcher, onDestroy, onMount, setContext } from "svelte";
 import { createMapScript } from "../utils/index.js"
-import { UI_MAP_EVENT } from "$lib/constants/event.js";
 import { get, writable } from "svelte/store";
+import { MOUSE_EVENT, DRAG_EVENT, TOUCH_EVENT } from "$lib/constants";
 import type { MapContext, MapOptions } from "../types/index.js";
 
 export let mapOptions: MapOptions;
+
+const MAP_EVENT = [
+  ...MOUSE_EVENT, 
+  ...DRAG_EVENT, 
+  ...TOUCH_EVENT,
+  "addLayer",
+  "bounds_changed",
+  "center_changed",
+  "centerPoint_changed",
+  "idle",
+  "init_stylemap",
+  "keydown",
+  "keyup",
+  "mapType_changed",
+  "mapTypeId_changed",
+  "panning",
+  "projection_changed",
+  "removeLayer",
+  "resize",
+  "size_changed",
+  "tilesloaded",
+  "zoom_changed",
+  "zooming",
+] as const;
 
 let mapElement: HTMLDivElement;
 const mapInstance = writable<naver.maps.Map>();
@@ -22,9 +46,9 @@ const initMap = () => {
       : undefined,
   }));
   
-  UI_MAP_EVENT.forEach((eventName) => {
-    get(mapInstance).addListener(eventName, (e) => {
-      dispatcher(eventName, e);
+  MAP_EVENT.forEach((eventName) => {
+    get(mapInstance).addListener(eventName, (event) => {
+      dispatcher(eventName, event);
     });
   });
 

@@ -6,30 +6,46 @@ import { get } from "svelte/store";
 export let open: boolean = false;
 export let infoWindowOptions: Omit<naver.maps.InfoWindowOptions, "content" | "position"> = {};
 
+const INFO_WINDOW_EVENTS = [
+  "anchorColor_changed",
+  "anchorSize_changed",
+  "anchorSkew_changed",
+  "backgroundColor_changed",
+  "borderColor_changed",
+  "borderWidth_changed",
+  "close",
+  "content_changed",
+  "disableAnchor_changed",
+  "disableAutoPan_changed",
+  "maxWidth_changed",
+  "open",
+  "pixelOffset_changed",
+  "position_changed",
+  "zIndex_changed",
+] as const;
+
 const { mapInstance } = getContext<MapContext>("map");
 const { markerInstance, position: { latitude, longitude } } = getContext<MarkerContext>("marker");
 
 const dispatcher = createEventDispatcher();
 
-let infoWindow: naver.maps.InfoWindow | undefined;
+let infoWindow: naver.maps.InfoWindow;
 let infoWindowElement: HTMLDivElement;
 
 const useOpenInfoWindow = () => {
-  console.log('useOpenInfoWindow')
   if (!get(markerInstance)) throw new Error("Marker is not loaded yet");
   if (!infoWindow) throw new Error("InfoWindow is not loaded yet");
   if (!latitude || !longitude) throw new Error("Latitude or Longitude is not provided");
 
   if (open) {
-    infoWindow?.open(get(mapInstance), get(markerInstance));
+    infoWindow.open(get(mapInstance), get(markerInstance));
   } else {
-    infoWindow?.close();
+    infoWindow.close();
   }
 
 };
 
 const initInfoWindow = () => {
-  console.log('initInfoWindow')
   infoWindow = new naver.maps.InfoWindow({
     ...infoWindowOptions,
     content: infoWindowElement,
@@ -37,6 +53,13 @@ const initInfoWindow = () => {
   });
 
   useOpenInfoWindow();
+
+  INFO_WINDOW_EVENTS.forEach((eventName) => {
+    infoWindow.addListener(eventName, (event) => {
+      dispatcher(eventName, event);
+    });
+  });
+
   dispatcher("load", infoWindow);
 };
 
@@ -51,8 +74,8 @@ markerInstance.subscribe((marker) => {
 });
 
 onDestroy(() => {
-  infoWindow?.close();
-  infoWindow = undefined;
+  infoWindow.close();
+  infoWindow.setMap(null);
 });
 
 </script>

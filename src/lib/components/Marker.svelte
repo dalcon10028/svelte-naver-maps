@@ -1,12 +1,14 @@
 <script lang="ts">
 import { createEventDispatcher, getContext, onDestroy, setContext } from "svelte";
 import type { MapContext, MarkerContext, MarkerOptions } from "$lib/types";
-import { UI_MARKER_EVENT } from "$lib/constants";
+import { MOUSE_EVENT, DRAG_EVENT, TOUCH_EVENT } from "$lib/constants";
 import { get, writable } from "svelte/store";
 
 export let latitude: number;
 export let longitude: number;
 export let markerOptions: MarkerOptions = {};
+
+const MARKER_EVENT = [...MOUSE_EVENT, ...DRAG_EVENT, ...TOUCH_EVENT] as const;
 
 const { mapInstance } = getContext<MapContext>("map");
 
@@ -29,8 +31,8 @@ const initMarker = (map: naver.maps.Map) => {
     ...markerOptions,
     position: new naver.maps.LatLng(latitude, longitude),
   }));
-  UI_MARKER_EVENT.forEach((eventName) => {
-    get(markerInstance)?.addListener(eventName, (e) => {
+  MARKER_EVENT.forEach((eventName) => {
+    get(markerInstance).addListener(eventName, (e) => {
       dispatcher(eventName, e);
     });
   });
@@ -44,7 +46,6 @@ mapInstance.subscribe((map) => {
   }
 });
 
-// onMount(() => useLoadMap(initMarker));
 onDestroy(() => { 
   get(markerInstance)?.setMap(null);
 });
