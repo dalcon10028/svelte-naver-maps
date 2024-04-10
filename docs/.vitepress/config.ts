@@ -70,6 +70,12 @@ export default defineConfig({
       ],
       '/reference/': [
         {
+          text: 'Base Type Definitions',
+          items: [
+            { text: '기반 타입', link: '/reference/base-type-defs' },
+          ]
+        },
+        {
           text: 'Map',
           items: [
             { text: 'NaverMap', link: '/reference/naver-map' },
