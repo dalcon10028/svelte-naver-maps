@@ -1,10 +1,10 @@
 <script lang="ts">
-import type { MapContext, MarkerContext } from "$lib/types";
+import type { InfoWindowOptions, MapContext, MarkerContext } from "$lib/types";
 import { createEventDispatcher, getContext, onDestroy } from "svelte";
 import { get } from "svelte/store";
 
 export let open: boolean = false;
-export let infoWindowOptions: Omit<naver.maps.InfoWindowOptions, "content" | "position"> = {};
+export let infoWindowOptions: InfoWindowOptions = {};
 
 const INFO_WINDOW_EVENTS = [
   "anchorColor_changed",

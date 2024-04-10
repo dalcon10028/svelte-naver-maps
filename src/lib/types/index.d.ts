@@ -10,6 +10,11 @@ export interface Point {
   longitude: number;
 }
 
+export interface Bounds {
+  minPoint: Point;
+  maxPoint: Point;
+}
+
 export interface MapOptions extends naver.maps.MapOptions, ScriptOptions {
   latitude?: number;
   longitude?: number;

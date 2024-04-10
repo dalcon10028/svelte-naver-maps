@@ -1,12 +1,9 @@
 <script lang="ts">
-import type { MapContext, RectangleOptions } from "$lib/types";
+import type { Bounds, MapContext, RectangleOptions } from "$lib/types";
 import { createEventDispatcher, getContext, onDestroy } from "svelte";
 import { get } from "svelte/store";
 
-export let minLatitude: number;
-export let minLongitude: number;
-export let maxLatitude: number;
-export let maxLongitude: number;
+export let bounds: Bounds;
 export let rectangleOptions: RectangleOptions = {};
 
 const RECTANGLE_EVENTS = [
@@ -32,8 +29,8 @@ const initRectangle = () => {
     ...rectangleOptions,
     map: get(mapInstance),
     bounds: new naver.maps.LatLngBounds(
-      new naver.maps.LatLng(minLatitude, minLongitude),
-      new naver.maps.LatLng(maxLatitude, maxLongitude)
+      new naver.maps.LatLng(bounds.minPoint.latitude, bounds.minPoint.longitude),
+      new naver.maps.LatLng(bounds.maxPoint.latitude, bounds.maxPoint.longitude),
     ),
   });
 
