@@ -65,6 +65,12 @@ export default defineConfig({
                 { text: '폴리곤, 폴리라인 그리기', link: '/guide/tutorial-3-polygon-simple' },
               ]
             },
+            { 
+              text: '지상 오버레이', 
+              items: [
+                { text: '지상 오버레이 표시하기', link: '/guide/tutorial-ground-overlay' },
+              ]
+            },
           ]
         }
       ],

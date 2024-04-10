@@ -36,6 +36,8 @@ export interface PolygonOptions extends Omit<naver.maps.PolygonOptions, "paths" 
 
 export interface PolylineOptions extends Omit<naver.maps.PolylineOptions, "path" | "map"> {};
 
+export interface GroundOverlayOptions extends Omit<naver.maps.GroundOverlayOptions, "map"> {};
+
 export interface MapContext {
   mapInstance: Writable<naver.maps.Map>;
 }

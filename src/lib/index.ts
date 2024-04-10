@@ -6,3 +6,4 @@ export { default as NaverEllipse } from './components/Ellipse.svelte';
 export { default as NaverRectangle } from './components/Rectangle.svelte';
 export { default as NaverPolygon } from './components/Polygon.svelte';
 export { default as NaverPolyline } from './components/Polyline.svelte';
+export { default as NaverGroundOverlay } from './components/GroundOverlay.svelte';

@@ -6,7 +6,7 @@
 
 ```svelte
 <script>
-import { NaverMap, NaverMarker } from "svelte-naver-maps";
+import { NaverMap, NaverPolygon } from "svelte-naver-maps";
 	
 const mapOptions = {
 	clientId: "YOUR_NAVER_MAP_CLIENT_ID",

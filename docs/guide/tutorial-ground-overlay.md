@@ -1,9 +1,16 @@
-<script lang="ts">
-import { NaverMap, NaverGroundOverlay } from "$lib";
+# 지상 오버레이 표시하기
 
+위도/경도 좌표에 연동된 이미지 오버레이를 생성하는 예제입니다.
+
+![tutorial-ground-overlay](tutorial-ground-overlay.png)
+
+```svelte
+<script>
+import { NaverMap, NaverGroundOverlay } from "svelte-naver-maps";
+	
 const mapOptions = {
-	clientId: "tew0f0bytg",
-	width: "100%",
+	clientId: "YOUR_NAVER_MAP_CLIENT_ID",
+  width: "100%",
 	height: "400px",
 	latitude: 36.634249797,
 	longitude: 127.129160067,
@@ -20,3 +27,4 @@ const mapOptions = {
     }}
   />
 </NaverMap>
+```
