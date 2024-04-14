@@ -59,7 +59,10 @@
     "vitest": "^1.2.0"
   },
   "svelte": "./dist/index.js",
-  "types": ["./dist/index.d.ts", "./dist/types/index.d.ts"],
+  "types": [
+    "./dist/index.d.ts",
+    "./dist/types/index.d.ts"
+  ],
   "type": "module",
   "module": "./dist/index.js",
   "repository": {

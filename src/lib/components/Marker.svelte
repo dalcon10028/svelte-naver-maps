@@ -1,6 +1,6 @@
 <script lang="ts">
-import { createEventDispatcher, getContext, onDestroy, setContext } from "svelte";
-import type { MapContext, MarkerContext, MarkerOptions } from "$lib/types";
+import { createEventDispatcher, getContext, hasContext, onDestroy, setContext } from "svelte";
+import type { MapContext, MarkerClusterContext, MarkerContext, MarkerOptions } from "$lib/types";
 import { MOUSE_EVENT, DRAG_EVENT, TOUCH_EVENT } from "$lib/constants";
 import { get, writable } from "svelte/store";
 
@@ -16,6 +16,8 @@ const dispatcher = createEventDispatcher();
 
 let markerInstance = writable<naver.maps.Marker>();
 let marketElement: HTMLDivElement;
+
+const { markers } = getContext<MarkerClusterContext>("markerCluster");
 
 setContext<MarkerContext>("marker", {
   markerInstance,
@@ -38,6 +40,8 @@ const initMarker = (map: naver.maps.Map) => {
   });
 
   dispatcher("load", get(markerInstance));
+
+  markers.push(get(markerInstance));
 }
 
 mapInstance.subscribe((map) => {

@@ -1,3 +1,4 @@
+export * from './utils/create-map-script';
 export { default as NaverMap } from './components/Map.svelte';
 export { default as NaverMarker } from './components/Marker.svelte';
 export { default as NaverInfoWindow } from './components/InfoWindow.svelte';
@@ -7,3 +8,4 @@ export { default as NaverRectangle } from './components/Rectangle.svelte';
 export { default as NaverPolygon } from './components/Polygon.svelte';
 export { default as NaverPolyline } from './components/Polyline.svelte';
 export { default as NaverGroundOverlay } from './components/GroundOverlay.svelte';
+export { default as NaverMarkerCluster } from './components/MarkerCluster.svelte';

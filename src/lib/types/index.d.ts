@@ -15,7 +15,7 @@ export interface Bounds {
   maxPoint: Point;
 }
 
-export interface MapOptions extends naver.maps.MapOptions, ScriptOptions {
+export interface MapOptions extends naver.maps.MapOptions {
   latitude?: number;
   longitude?: number;
   width?: string | number;
@@ -48,4 +48,8 @@ export interface MarkerContext {
     latitude: number;
     longitude: number;
   }
+}
+
+export interface MarkerClusterContext {
+  markers: naver.maps.Marker[];
 }

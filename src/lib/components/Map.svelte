@@ -4,6 +4,7 @@ import { createMapScript } from "../utils/index.js"
 import { get, writable } from "svelte/store";
 import { MOUSE_EVENT, DRAG_EVENT, TOUCH_EVENT } from "$lib/constants";
 import type { MapContext, MapOptions } from "../types/index.js";
+import { scriptCallbacks } from "$lib/stores/index.js";
 
 export let mapOptions: MapOptions;
 
@@ -55,12 +56,10 @@ const initMap = () => {
   dispatcher("load", get(mapInstance));
 }
 
-onMount(() => {
-  window.naver ? initMap() : createMapScript({
-    clientId: mapOptions.clientId,
-    category: mapOptions.category,
-  }, initMap);
-})
+scriptCallbacks.update((callbacks) => {
+  callbacks.push(initMap);
+  return callbacks;
+});
 
 onDestroy(() => {
   get(mapInstance).destroy();

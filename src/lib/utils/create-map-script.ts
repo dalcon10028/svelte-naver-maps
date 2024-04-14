@@ -1,6 +1,7 @@
+import { onScriptLoad } from "$lib/stores";
 import type { ScriptOptions } from "$lib/types/index.js";
 
-export function createMapScript(options: ScriptOptions, onLoad?: () => void) {
+export function createMapScript(options: ScriptOptions) {
   const BASE_URL = "https://openapi.map.naver.com/openapi/v3/maps.js";
   const naverMapScript = document.createElement('script');
 
@@ -9,7 +10,7 @@ export function createMapScript(options: ScriptOptions, onLoad?: () => void) {
   naverMapScript.defer = true;
 
   naverMapScript.onerror = () => new Error('Failed to load Naver Map API');
-  if (onLoad) naverMapScript.onload = onLoad;
+  naverMapScript.onload = () => onScriptLoad.set(true);
 
   document.head.appendChild(naverMapScript);
 }
