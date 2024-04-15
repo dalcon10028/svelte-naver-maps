@@ -23,7 +23,7 @@ export default defineConfig({
     nav: [
       { text: '가이드', link: '/guide/getting-started' },
       { text: 'Reference', link: '/reference/naver-map' },
-      { text: 'Naver Maps 공식문서', link: 'https://navermaps.github.io/maps.js/'}
+      { text: 'Naver Maps 공식문서', link: 'https://navermaps.github.io/maps.js.ncp/'}
     ],
 
     sidebar: {
@@ -50,6 +50,7 @@ export default defineConfig({
               items: [
                 { text: '마커 표시하기', link: '/guide/tutorial-1-marker-simple' },
                 { text: '이미지 아이콘 사용하기', link: '/guide/tutorial-3-marker-image-icon' },
+                { text: '마커 클러스터화하기', link: '/guide/tutorial-marker-cluster' },
               ]
             },
             { 
@@ -84,6 +85,7 @@ export default defineConfig({
         {
           text: 'Map',
           items: [
+            { text: 'createMapScript', link: '/reference/create-map-script' },
             { text: 'NaverMap', link: '/reference/naver-map' },
           ]
         },
@@ -91,6 +93,19 @@ export default defineConfig({
           text: 'Naver Overlays',
           items: [
             { text: 'NaverMarker', link: '/reference/naver-marker' },
+            { text: 'NaverInfoWindow', link: '/reference/naver-info-window' },
+            { text: 'NaverCircle', link: '/reference/naver-circle' },
+            { text: 'NaverEllipse', link: '/reference/naver-ellipse' },
+            { text: 'NaverRectangle', link: '/reference/naver-rectangle' },
+            { text: 'NaverPolygon', link: '/reference/naver-polygon' },
+            { text: 'NaverPolyline', link: '/reference/naver-polyline' },
+          ]
+        },
+        {
+          text: 'Naver Overlays',
+          items: [
+            { text: 'NaverMarker', link: '/reference/naver-marker' },
+            { text: 'NaverMarkerCluster', link: '/reference/naver-marker-cluster' },
             { text: 'NaverInfoWindow', link: '/reference/naver-info-window' },
             { text: 'NaverCircle', link: '/reference/naver-circle' },
             { text: 'NaverEllipse', link: '/reference/naver-ellipse' },

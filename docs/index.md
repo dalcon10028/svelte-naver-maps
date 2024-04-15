@@ -11,15 +11,26 @@ hero:
       text: Read docs
       link: /guide/getting-started
     - theme: alt
-      text: View examples
-      link: /api-examples
+      text: References
+      link: /reference/base-type-defs
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+## Getting Started
 
+::: code-group
+
+```sh [npm]
+$ npm i svelte-naver-maps
+$ npm i -D @types/navermaps # for typescript
+```
+
+```sh [pnpm]
+$ pnpm add svelte-naver-maps
+$ pnpm add -D @types/navermaps # for typescript
+```
+
+```sh [yarn]
+$ yarn add svelte-naver-maps
+$ yarn add -D @types/navermaps # for typescript
+```
+:::

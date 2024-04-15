@@ -45,9 +45,7 @@ const initMarker = (map: naver.maps.Map) => {
 }
 
 mapInstance.subscribe((map) => {
-  if (map) {
-    initMarker(map);
-  }
+  if (map) initMarker(map);
 });
 
 onDestroy(() => { 

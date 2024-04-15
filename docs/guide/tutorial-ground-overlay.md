@@ -6,10 +6,11 @@
 
 ```svelte
 <script>
-import { NaverMap, NaverGroundOverlay } from "svelte-naver-maps";
+import { NaverMap, NaverGroundOverlay, createMapScript } from "svelte-naver-maps";
 	
+createMapScript({ clientId: "YOUR_NAVER_MAP_CLIENT_ID" });
+
 const mapOptions = {
-	clientId: "YOUR_NAVER_MAP_CLIENT_ID",
   width: "100%",
 	height: "400px",
 	latitude: 36.634249797,

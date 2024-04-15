@@ -6,7 +6,9 @@
 
 ```svelte
 <script>
-import { NaverMap, NaverMarker, NaverInfoWindow } from "svelte-naver-maps";
+import { NaverMap, NaverMarker, NaverInfoWindow, createMapScript } from "svelte-naver-maps";
+
+createMapScript({ clientId: "YOUR_NAVER_MAP_CLIENT_ID" });
 
 let open: boolean = true;
 
@@ -15,7 +17,6 @@ const onMarkerClick = () => {
 };
 
 const mapOptions = {
-	clientId: "YOUR_NAVER_MAP_CLIENT_ID",
 	width: "100%",
 	height: "400px",
 	latitude: 37.3849483,

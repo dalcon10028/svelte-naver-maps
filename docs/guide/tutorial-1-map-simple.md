@@ -4,13 +4,14 @@
 
 ```svelte
 <script>
-import { NaverMap } from "svelte-naver-maps";
+import { NaverMap, createMapScript } from "svelte-naver-maps";
+
+createMapScript({ clientId: "YOUR_NAVER_MAP_CLIENT_ID" });
 
 </script>
 
 <NaverMap
   mapOptions={{
-    clientId: "YOUR_NAVER_MAP_CLIENT_ID",
     width: "100%",
     height: "400px",
   }}

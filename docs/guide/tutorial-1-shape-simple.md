@@ -6,10 +6,11 @@
 
 ```svelte
 <script>
-import { NaverMap, NaverCircle, NaverEllipse, NaverRectangle } from "svelte-naver-maps";
+import { NaverMap, NaverCircle, NaverEllipse, NaverRectangle, createMapScript } from "svelte-naver-maps";
+
+createMapScript({ clientId: "YOUR_NAVER_MAP_CLIENT_ID" });
 
 const mapOptions = {
-	clientId: "YOUR_NAVER_MAP_CLIENT_ID",
 	width: "100%",
 	height: "400px",
 	latitude: 37.3595953,

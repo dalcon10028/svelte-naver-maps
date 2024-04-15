@@ -15,6 +15,7 @@ Svelte Naver Maps은 네이버에서 제공하는 [Naver Map API](https://naverm
 | :-----------: | :----:|
 | `NaverMap`    | 네이버 지도 컴포넌트 |
 | `NaverMarker` | 마커 컴포넌트 |
+| `NaverMarkerCluster` | 마커 클러스터 컴포넌트 |
 | `NaverInfoWindow` | 정보창 컴포넌트 |
 | `NaverCircle` | 원 컴포넌트 |
 | `NaverEllipse` | 타원 컴포넌트 |
